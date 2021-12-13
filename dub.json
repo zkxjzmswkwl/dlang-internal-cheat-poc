@@ -1,0 +1,14 @@
+{
+	"authors": [
+		"gay"
+	],
+	"copyright": "im gay",
+	"dependencies": {},
+	"description": "POC.",
+	"libs": [
+		"user32"
+	],
+	"license": "Apache 2.0",
+	"name": "internal_ac",
+	"targetType": "dynamicLibrary"
+}

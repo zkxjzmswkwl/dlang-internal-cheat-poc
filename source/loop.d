@@ -1,7 +1,7 @@
 import core.thread;
 
 import game;
-import cheats;
+import cheat;
 import core.sys.windows.windows;
 
 class Loop : Thread {
@@ -17,7 +17,6 @@ class Loop : Thread {
 	{
 		for ( ;; )
 		{
-
 			if ( GetAsyncKeyState( 0x5 ) & 1 )
 				cheats.telekill();
 

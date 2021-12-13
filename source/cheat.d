@@ -27,14 +27,13 @@ public:
 	/// Teleports to each enemy until they die. Swaps to next player afterward.
 	void telekill()
 	{
-		write_chat("Telekill");
+		write_chat( "Telekill" );
 		playerCount = getPlayerCount();
-		entityList  = cast(DWORD*)0x50F4F8;
-		localPlayer = *cast(Entity**)0x50F4F4;
+		entityList  = cast(DWORD*)0x10F4F8;
+		localPlayer = *cast(Entity**)0x10F4F4;
 
 		for (int i = 0; i < *playerCount; i++)
 		{
-			write_chat("test");
 			Entity* curPlayer = *cast(Entity**)(*entityList + 4 * i);
 
 			if ( isEntity( curPlayer ) ) 
@@ -56,21 +55,25 @@ public:
 	/// It sets your ammo to 500. Nice
 	void setAmmo()
 	{
-		localPlayer = *cast(Entity**)0x50F4F4;
+		localPlayer = *cast(Entity**)0x10F4F4;
 
-		localplayer.assaultrifle = 500;
-		localplayer.shotgun		 = 500;
-		localplayer.machinegun	 = 500;
-		localplayer.sniper		 = 500;
-		localplayer.carbine		 = 500;
-		localplayer.pistol		 = 500;
+		localPlayer.assaultrifle = 500;
+		localPlayer.shotgun		 = 500;
+		localPlayer.machinegun	 = 500;
+		localPlayer.sniper		 = 500;
+		localPlayer.carbine		 = 500;
+		localPlayer.pistol		 = 500;
+
+		write_chat( "Ammo set to 500." );
 	}
 
 	/// It sets your health to 500. Epic
 	void setHealth()
 	{
-		localPlayer = *cast(Entity**)0x50F4F4;
+		localPlayer = *cast(Entity**)0x10F4F4;
 		localPlayer.health = 500;
+
+		write_chat( "Health set to 500." );
 	}
 
 }

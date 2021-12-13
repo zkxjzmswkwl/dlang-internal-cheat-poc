@@ -1,4 +1,4 @@
-module WindowsApp2;
+module source.app;
 
 import core.sys.windows.dll;
 

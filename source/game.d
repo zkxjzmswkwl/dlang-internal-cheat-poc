@@ -10,7 +10,7 @@ void write_chat(const char* input)
 
 int* getPlayerCount()
 {
-	return cast(int*)0x50F4Fc;
+	return cast(int*)0x10F4Fc;
 }
 
  bool isEntity(Entity* potentialEntity)
